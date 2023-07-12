@@ -10,9 +10,16 @@ public class Member {
 
     @Id
     private Long id;
-
     //@Colum을 통해서 Colum 이름도 테이블에 작성된 이름으로 작성할 수 있다.
     private String name;
+
+    public Member() {
+    }
+
+    public Member(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
     public Long getId() {
         return id;
