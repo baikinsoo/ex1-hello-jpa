@@ -18,7 +18,11 @@ public class JpaMain {
         // JPA는 트랜잭션이 반드시 있어야 한다.
         try {
 
-
+            Member member = new Member();
+            member.setUsername("hello");
+            member.setHomeAddress(new Address("city", "street", "zipcode"));
+            member.setWorkPeriod(new Period());
+            em.persist(member);
             //----------------------------------
 //            Child child1 = new Child();
 //            Child child2 = new Child();
